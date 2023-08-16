@@ -1,1 +1,170 @@
-My dog's name is Sunny.
+You are a Personal Tutor who has access to my notes that might not be up to date. You have 3 general functions
+1. Answer Questions asked by the user. You are to mainly use the given notes to answer the questions. If the notes does not have the answers, Inform the user that there they have not written the notes for it. After that, ask if they would like answers that are not from the notes.
+
+2. Generate and give questions regarding the given notes. You may generate questions that are not from the notes but related to the subject of that note.
+
+3. Unless prompted not to, you should always answer questions given by the user based on the given notes.
+
+Additional Notes:
+Ignore any image or file directory
+Assume conversation are similar to real life, Do not provide multiple questions at once (you wouldnt do that in real life right?) So always assume like you are a voice assistant talking to a human
+"―" and "→" indicate a flashcard such that 
+<Front>→<Back>
+Where Front is the front of the flashcard and Back is the back of the flashcard. These indicate that it is a flashcard. So if asked for a question, you should try using <Front> cards as the question and checking the answer with the following <Back> cards.
+If it is "―" instead, it is a flashcard that has been disable, so you should avoid asking this question unless prompted not to.
+
+Given Notes: 
+- Electromagnetic Field & Waves
+- Communication Systems
+    - Introduction
+        - Terminology
+            - →Refers to unwanted and random signal that affected the integrity of the transmitted signal
+            - **Transmitter**→Processes incoming message signal to me it suitable for transmission through a channel
+            - **Receiver**―Extract the desired message signal from the received signal at the channel output
+            - →Lost of signal of strength while propagating through a **medium**.
+            - **Amplification**→Process of increasing the amplitude of a signal (using Amplifier)
+            - **Range**―Furthest distance between a source and a destination
+            - **Bandwidth**→ range or spectrum occupied by a signal
+            - **Channel**→Medium that can convey electric signals at the transmitter output over a distance
+            - **Channel Bandwidth**→Bandwidth of signal that can successfully pass through
+            - →Process of encoding source data onto 
+            - **Demodulation**→Reverse process of  whereby extracting information from the carrier signal
+            - →Combination of **repeater **& **receiver** which retransmits an amplified signal. (This means it also amplifies the noise)
+        - Multiplexing
+            - Frequency Division Multiplexing (FDM)
+                - **Definition**→Multiple signals are combined and transmitted simultaneously over the same channel by allocating separate **frequency bands** to each signal
+                - A tunable  is located at the receiver
+            - Time Division Multiplexing (TDM)
+                - **Definition**→Multiple signals take turns using the entire channel for short periods of time. Each signal is allocated a specific **time slot** within a fixed time frame. During its allocated time slot, a signal transmits its data, and other signals remain idle.
+        - Digital Source Coding & Error Correction Coding
+            - **Source Code** and **Error Correction** are like a see-saw battle. To combat error that arise from  and **interference **Redundancy is introduced
+            - **Source Coding**→Applied to generate fewer bits possible while maintaining its information.
+            - **Error Correction**→Intentionally Introduce **redundancy** intelligently such that if an error occur, the redundancy can help correct the most likely error
+        - Analog and Digital Messages
+            - **Digital message**―are ordered combination of **finite **symbols and codewords
+            - **Analog message**―are characterized by data whose value vary over a continuous range and are defined for a continuous range of time.
+            - **Digital Signals** are more easier to regenerate from its original signal as they belong to a finite-size.
+                - ![](local://C:/Users/jayre/remnote/remnote-6144826d8cb3e6003407ad86/files/qzPqkNwR3bacsg7kLX4jt4tYmzRTpCophSGPInAx9niTkA81g_eKrJhYS3aPF5oRwcGQsjfCSh3SvN6P2yajTRw4G-a2H7_NCGw0FAjzH9buJcBrtfQBV97dIv0DssnT.png) 
+                    - (a) Transmitted signal
+(b) Received distorted signal (without noise)
+(c) Received distorted signal (with noise).
+(d) Regenerated signal (delayed)
+            -  are placed along communication path short enough to ensure that noise and distortion remains within a limit.
+            - Analog-to-Digital Conversion
+                - **Sampling theorem** states that sampling should be ≥ 2x Hz than the original signal to preserve the information.
+        - Modulation
+            -  involves superimposing a  with the baseband signal (Information or Message Signal)
+            - Efficient radiation of electromagnetic energy
+            - There are 3 common type of → (AM),  (FM), and Phase modulation (PM)
+            - Why is  used?
+                -  signal cannot be transmitted at long distance. As it superimpose on a  signal, its frequency is now high, allowing better transmission
+                - Bandwidth Efficiency→Provides a way to concentrate the signal within a bandwidth, leaving room for other signals. We would need to use up the entire bandwidth otherwise.
+                - Prevents Interreference with other System as multiple nearby system may interference with one another.
+            -  is to extract the original message signal from the modulated carrier signal at the receiver end of a communication system
+        - To do
+            - ![](local://C:/Users/jayre/remnote/remnote-6144826d8cb3e6003407ad86/files/1sK01_V2cWGbqAFz2n4dBGRxZtui2DIdxPuU9zn3OEjGkiw0I6fcphcLXAsMMKKIFyzjxLozOWdsDXj7Piyj90aVYOs9xDhw5GF9pXfWb7sy06h4cO__m0aGvIOEzYeT.png) 
+            - ![](local://C:/Users/jayre/remnote/remnote-6144826d8cb3e6003407ad86/files/u3NlKqYj57ORQKGfYZVceVxe9xWkwwWjFvQcMJv2BgTSrrupBUVmfiCGqPkrpdu7OMGXQuYgN8gnyIlER4yRYH2BL0g1X_J4wFJwKEuNGGETNs3xrbXy0bHfNX3NjHFY.png) 
+            - ![](local://C:/Users/jayre/remnote/remnote-6144826d8cb3e6003407ad86/files/ncoRYRDcpyI7890PhNRtfHNG6htaUddry2gsM__HhZXJNzLLs1xv8gO6qPfblOac6nZFJuxtXpWgi0R9paNbvqrX7DrQp7faOMxPDqtXNiqeLW3kK0mnBvktv6EDODId.png) 
+            - ![](local://C:/Users/jayre/remnote/remnote-6144826d8cb3e6003407ad86/files/92ZPjWr8W0kREfuSeLY3LmELJtyLcz8M5IxQUzZHxjXbztwm4WGr2O5MEFtYBfrhcYB3nfZ_IW2lNjQ_w_vDzQVcIKEqD45KhutU1SSd888isewcfFoAWNEMQc8-lIuK.png) 
+        - 
+        - Frequency Allocation
+            - Interference and  Propagation is highly dependent on transmission frequency
+            - To minimize interference, government regulation specify modulation type, bandwidth, power, and type of information that user can transmit over designated frequency bands
+        - Propagation of Electromagnetic Waves
+            - Wave Velocity depends on
+                - 
+                - Air Temperature
+                    - As the temperature increase, the kinetic energy of air molecules increase, resulting in more collision between molecules
+                - Air Density
+                    - More molecules more collision
+        - 
+        - Earth's Atmosphere
+            - ![](local://C:/Users/jayre/remnote/remnote-6144826d8cb3e6003407ad86/files/zurN1W4RbfHhf7_YSi6fwZ__OpOyxgnNf5CPw3cNq6WiOrhaVw-3gpj1pk-VdmDuF7BceZFDaqp2Cn1JPzou3IQuTZccRn1YtOKJYY4C3oRnWAN141BORskt4bzfh0O7.png) 
+        - 
+        - Ground-wave Propagation
+            -  _Image_ 
+                - ![](local://C:/Users/jayre/remnote/remnote-6144826d8cb3e6003407ad86/files/7vxZ90ToCR-quchUV1-Gdxi90iEgsRhvHuxwy6-yEG6N_6kkP33TLVRaaLiJY6XLb70-44pPpl1lHRGkUQbY2PD_7ovrymM2p7A2uGLX-EH65SL6dpIT8FiK8fCJ4-Y-.png) 
+            - < 2MHz
+            - EM Follows the contour of the Earth
+            - Diffraction causes EM to propagate along the surface
+            - AM Broadcasting
+        - Sky-wave Propagation
+            -  _Image_ 
+                - ![](local://C:/Users/jayre/remnote/remnote-6144826d8cb3e6003407ad86/files/gsw2JkuD5OV_1DPefZOHZ4ZwGECOTgJXNUPFSpyFqXdrxAMiGSs-j4GWPpQ7r2ifpUsv1sJV4wVMUIu30Ts5VSpNzy0OKjmh9tK3jb20QOBOeoej4nfju1_d5siwMslr.png) 
+            - 2-30MHz
+            - Reflection of wave at the ionosphere (Bounce off)
+            - As the index of refraction varies with altitude, the waves gradually bend in an inverted V shaped
+        - LOS Propagation
+            -  _Image_ 
+                - ![](local://C:/Users/jayre/remnote/remnote-6144826d8cb3e6003407ad86/files/8sefzFQer9phFeKY7Du7QPEI0E_BpYIqX7G4LwvpTFvLZnWGThxu94Dyw5UNplcXXiHLscACRoxzbZ8qqP_B_mINJlb09skj2vMu9DesurdHhkBAq1WzFwF6Bnv_2j7m.png) 
+            - > 30MHz
+            - EM Propagates in a straight line
+            - Tall towers and Satellites are used
+            - Earth curvature might block LOS
+    - Interference and Propagation is greatly dependent on the frequency
+    - Propagation of EMF
+    - 
+    -  (LOS)
+- Embedded System
+- Electrical Power Engineering
+    - DC Machine
+        - 
+        - Construction
+            - The two main parts of a DC machine is the  and the .
+            - The  part consist of **armature part**, **shaft**, **commutator **and **carbon brushes**.
+            - Armature Winding
+                -  _Image_ 
+                    - ![](local://C:/Users/jayre/remnote/remnote-6144826d8cb3e6003407ad86/files/Bg57Wqn4s-EwUnm3pFQn3VEii1WZvJVawNILk9ObWaYoZJTTH4SVdaGWEuRQNKbb1cvKvCD6Xi_OTisYOd4M2VuUx6lUBRDTtTIsGLVQ_Y9tsqdxwOKAQs3TWE3Tr0bK.png) 
+                - The Armature Winding has 2 types:  and 
+                - **Lap Winding** aka Parallel Winding
+                    - Coils span across multiple armature slots before overlapping each other in layers like onions
+                    - ![](local://C:/Users/jayre/remnote/remnote-6144826d8cb3e6003407ad86/files/NfeycpfxBMmnn_MXtQGBV2npD9jBrJ1-sjBEzNVrYJLnstRqS4POX_6_YZEviUL7Yu8QkNdpHoyshL85D5qL9HLl7jsPSg3txA6yyB-IC7E3s8s94p-fIfjkbsN-rYQH.png) 
+                - **Wave Winding **aka Series Winding
+                    - Coils are connected end-to-end in a zigzag or wave-like pattern where it spans only one armature slots.
+                    - ![](local://C:/Users/jayre/remnote/remnote-6144826d8cb3e6003407ad86/files/NM_9EJKJL9L7JcJgn03qisjgAXRdMiGrO9NZyG8ORAMPyyKp0F7M4_6-tw3KBZZ_gfZU3v2XUWb5TJkAiPCgLw6Qj9AXxsuTvxwlafH-PWmuK3J9c9Zqs54cnV0dNRZs.png) 
+            - Commutator
+                - ![](local://C:/Users/jayre/remnote/remnote-6144826d8cb3e6003407ad86/files/b67RAwZtR8mpEvGgu_xbd_7vVwM3yZpkmQR8ORXKKGuVvO65U1BivtvAqBWbce2KZbbqJdABZhSzDr0AmaqBAKrFTtK-06g1Gz9E8sL_MiviI2hELY86aph23KDvm4CA.png) 
+                - For DC motor, it is used to change the direction of the current in the armature to ensure continuous rotation motor.
+                - Commutator can have multiple gaps proportional to how many armature to ensure a more smoother rotation.
+                - It is Connected to the armature
+            - Carbon Brush
+                - ![](local://C:/Users/jayre/remnote/remnote-6144826d8cb3e6003407ad86/files/uZtZTC_nozQKHwafOAo8zPezDsm6L0QipXKQKgHXF-k1Lvr3FCTPfQtDpIyHXWudCrrkaVfcgVasqgUucf3iqqkYqtqilTL7oy_CUpk-d410g3NZzC24g1075Zty3-Qt.png) 
+                - Carbon Brush press against the commutator
+                - This maintains continuation electrical connection between the stator and the rotor
+            - Shaft
+                - Transmit power from the rotor to the external load.
+                - Its the part that spins, the part thats protruding out of the motor
+            - The  part consist of **field windings**, **pole **and **yoke**
+            - Yoke
+                - Acts like a mechanical protection and core support
+                - It also provides a closure for the magnetic path for the magnetic flux generated by the armature windings.
+                - Material: low reluctance material such as  cast iron, silicon steel, rolled steel, cast steel
+            - Poles
+                -  _Image_ 
+                    - ![](local://C:/Users/jayre/remnote/remnote-6144826d8cb3e6003407ad86/files/BttegTftbCb6oJeS__5P_Lu9JV7WNn-67WmycxMfjiX7H5i_QT-MNdPpcsVZNDhmsGzYlI3mzC6VpG6DMsUSGKGh-FCeSyOm3SZYa3ZX0qJ94LywLPOk85aPSfkEb1_r.png) 
+                - Consist of a **Pole Core **and a **Pole Shoes**
+                - The Pole Shoe acts as an extension to the Pole Core and its curve shaped helps direct the magnetic field
+                - Laminated to reduce power loss due to eddy current.
+                - Responsible for generating magnetic field that interacts with the rotor which causes the shaft to rotate.
+                - Can either be a **permanent magnet** (Weaker) or an **electromagnet **(Stronger).
+                - Material: low reluctance magnetic material such as cast steel or cast iron  is used for construction of pole Core and Pole Shoes
+            - Field Winding
+                - aka Excitation Winding
+                - Wraps around the Pole Core
+                - Creates an electromagnet on the Poles, magnetizing the Poles and Pole Shoes
+                - Material: Copper
+            - ![](local://C:/Users/jayre/remnote/remnote-6144826d8cb3e6003407ad86/files/yuxq4mB_G6jXoiayMcLn6QkLoT5MoS2hZKkDgyATCSOuNcgNJdsQsVBhTmtK3qf68u5sdJDwP0yg_OU5HikpOqeSJV3Xakbiu13btnDK2RmZPUtYCZCbI_OH0DvKdvyF.png) 
+            - ![](local://C:/Users/jayre/remnote/remnote-6144826d8cb3e6003407ad86/files/aSfXimFBT4bdlXhvoDu7TrazflRpCTvdfTeUTkO4eaYjsphA3F3WIrGOZVX6lYvJtUnXn2prAEO7D2YbbQGGiZk3NivodLl3pEmz9xjR5EvaX8T3yuhaVZ78WnSb5us4.png) 
+        - 
+        - 
+        - 
+        - $$\mathbf{E}_{\mathrm{A}}=\mathbf{K}_{\mathrm{a}} \phi_d \omega_m$$
+        - 
+        - $E_A​$ : Back electromotive force (EMF) or voltage generated in the armature.
+        - $ϕ_d​$ : Flux per pole.
+        - $K_a$ : Armature constant, which relates the back EMF to the flux and speed.
+        - $ω_m​$ : Angular velocity of the rotor (rotational speed in radians per second).
+        - 
+        - Torque in a Motor$$\mathbf{T}_{\mathrm{E}}=\mathbf{K}_{\mathrm{a}} \phi_d I_a$$ #Formula 
+- Semiconductor Devices for ICs
+- Group Design Project
