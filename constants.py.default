@@ -1,0 +1,3 @@
+# remove default extension to prevent git from publishing API key online
+
+APIKEY = ""

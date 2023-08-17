@@ -1,5 +1,7 @@
 import os
 import sys
+import mad
+import time
 
 import openai
 from langchain.chains import ConversationalRetrievalChain, RetrievalQA
@@ -11,12 +13,21 @@ from langchain.indexes.vectorstore import VectorStoreIndexWrapper
 from langchain.llms import OpenAI
 from langchain.vectorstores import Chroma
 
+from mutagen.mp3 import MP3
+
+
+from voiceTTS import recognize_speech
+
+from gtts import gTTS
+import pygame
+
 import constants
 
 os.environ["OPENAI_API_KEY"] = constants.APIKEY
 
 # Enable to save to disk & reuse the model (for repeated queries on the same data)
 PERSIST = False
+
 
 query = None
 if len(sys.argv) > 1:
@@ -40,13 +51,33 @@ chain = ConversationalRetrievalChain.from_llm(
 )
 
 chat_history = []
+conversationNo = 0
 while True:
+  pygame.mixer.init()
+  conversationNo += 1
   if not query:
-    query = input("Prompt: ")
+    print("Prompt: ")
+    query = recognize_speech()
   if query in ['quit', 'q', 'exit']:
+    pygame.mixer.music.load("exitConvo.mp3")
+    pygame.mixer.music.play()
+    time.sleep(2)
     sys.exit()
   result = chain({"question": query, "chat_history": chat_history})
   print(result['answer'])
+  text = result['answer']
+
+  tts = gTTS(text)
+  tts.save("output{}.mp3".format(conversationNo))
+
+  pygame.mixer.music.load("output{}.mp3".format(conversationNo))
+  pygame.mixer.music.play()
 
   chat_history.append((query, result['answer']))
   query = None
+  
+  audio = MP3("output{}.mp3".format(conversationNo))
+  duration_in_seconds = audio.info.length
+  
+  time.sleep(duration_in_seconds + 1)
+
